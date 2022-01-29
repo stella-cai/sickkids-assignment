@@ -4,16 +4,16 @@ import { Typography, TextField, InputAdornment, Button, IconButton, Divider } fr
 import {Email, Visibility, VisibilityOff } from '@mui/icons-material';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 
-function Login(props) {
-  const username = useFormInput('');
+function Login() {
+  const email = useFormInput('');
   const password = useFormInput('');
-  const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(false);
 
   const [showPassword, setShowPassword] = useState(false);
 
   // handle button click of login form
   const handleLogin = () => {
+    console.log('email: ' + email.value);
+    console.log('password: ' + password.value);
   }
 
   const handleClickShowPassword = () => {
@@ -42,6 +42,7 @@ function Login(props) {
                 </InputAdornment>
               ),
             }}
+            {...email}
           />
 
           <TextField className='text-field' variant='outlined' sx={{ my: 2 }} placeholder='Password' 
@@ -64,6 +65,7 @@ function Login(props) {
               </InputAdornment>
               ),
             }}
+            {...password}
           />
 
           <Button id='login-button' variant='contained' onClick={handleLogin}>
