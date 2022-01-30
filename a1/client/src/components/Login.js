@@ -26,14 +26,10 @@ function Login() {
         email,
         password,
       });
-      console.log('user.data :>> ', user.data);
       Cookies.set('access', user.data.accessToken);
       Cookies.set('email', user.data.email);
-
       dispatch(login());
     } catch (err) {
-      console.log(err);
-      console.log('err.response.data :>> ', err.response.data);
       seterrorMessage(err.response.data.message);
     }
   }
@@ -98,8 +94,8 @@ function Login() {
                 Log in
               </Typography>
             </Button>
-
           </div>
+
           <div id='signup-container'>
             <div id='or-text-row'>
               <hr className='or-text-hr' />
@@ -113,9 +109,7 @@ function Login() {
               </a>
             </div>
           </div>
-
         </div>
-
       </div>
     )
   }
@@ -127,26 +121,13 @@ function Login() {
           Log in
         </Typography>
 
-        {/* <div id='fields-container'> */}
-        <TextField className='text-field' variant='outlined' sx={{ my: 2 }} placeholder='Email' type='email'
-          InputProps={{
-            startAdornment: (
-              <InputAdornment position='start'>
-                <Email />
-              </InputAdornment>
-            ),
-          }}
+        <TextField className='text-field' variant='outlined' sx={{ my: 2 }} placeholder='Email*' type='email'
           {...email}
         />
 
-        <TextField className='text-field' variant='outlined' sx={{ my: 2 }} placeholder='Password'
+        <TextField className='text-field' variant='outlined' sx={{ my: 2 }} placeholder='Password*'
           type={showPassword ? 'text' : 'password'}
           InputProps={{
-            startAdornment: (
-              <InputAdornment position='start'>
-                <LockOutlinedIcon />
-              </InputAdornment>
-            ),
             endAdornment: (
               <InputAdornment position='end'>
                 <IconButton

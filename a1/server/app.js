@@ -21,7 +21,7 @@ const login = async (req, res) => {
 
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.send('This is the root route.');
 })
 
 app.post('/login', jsonParser, login);
