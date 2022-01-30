@@ -11,6 +11,8 @@ import { useMediaQuery } from 'react-responsive';
 
 function Login() {
   const [showPassword, setShowPassword] = useState(false);
+  const [errorMessage, seterrorMessage] = useState('');
+
   const email = useFormInput('');
   const password = useFormInput('');
 
@@ -32,6 +34,7 @@ function Login() {
     } catch (err) {
       console.log(err);
       console.log('err.response.data :>> ', err.response.data);
+      seterrorMessage(err.response.data.message);
     }
   }
 
@@ -87,6 +90,8 @@ function Login() {
               }}
               {...password}
             />
+
+            {errorMessage && <small id='error-message'>{errorMessage}</small>}
 
             <Button id='login-button' variant='contained' onClick={handleLogin}>
               <Typography sx={{ fontWeight: 'bold', my: 0.1 }} variant='h5' component='h2'>
@@ -156,6 +161,8 @@ function Login() {
           }}
           {...password}
         />
+
+        {errorMessage && <small id='error-message'>{errorMessage}</small>}
 
         <a href={null} onClick={() => { }} id='forgot-password-button'>
           Forgot your password?

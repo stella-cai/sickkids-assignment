@@ -41,19 +41,23 @@
 }
 
 #login-text {
-    /* width: 100vw; */
     padding-bottom: 10%;
 }
 
 #login-text-mobile {
-    /* width: 100vw; */
-    /* width: 90%; */
     text-align: center;
     padding-top: 10%;
 }
 
 .text-field {
     width: 100%;
+}
+
+#error-message {
+    color: red;
+    align-self: flex-start;
+    margin-bottom: 2%;
+    padding-left: 2%;
 }
 
 #login-button {
