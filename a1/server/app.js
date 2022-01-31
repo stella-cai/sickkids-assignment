@@ -26,6 +26,6 @@ app.get('/', (req, res) => {
 
 app.post('/login', jsonParser, login);
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
   console.log(`API listening on port ${port}`)
 });
