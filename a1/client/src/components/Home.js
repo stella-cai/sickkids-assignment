@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Typography, Card, Link } from '@mui/material';
+import React from 'react';
+import { Card, Link } from '@mui/material';
 import Cookies from 'js-cookie';
 import './Home.css';
 import { logout } from '../reducers/userStatusReducer';

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Login.css';
-import { Typography, TextField, InputAdornment, Button, IconButton, Divider } from '@mui/material'
+import { Typography, TextField, InputAdornment, Button, IconButton } from '@mui/material'
 import { Email, Visibility, VisibilityOff } from '@mui/icons-material';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import axios from 'axios';
