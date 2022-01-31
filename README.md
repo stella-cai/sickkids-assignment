@@ -39,3 +39,14 @@ We need to run the backend to handle the login functionality.
 `yarn start`
 
 5. Navigate to http://localhost:3000
+
+## Demos
+
+https://user-images.githubusercontent.com/55229818/151743333-75ac6349-6b2c-4988-adb8-c1f551fdee7c.mov
+
+
+
+https://user-images.githubusercontent.com/55229818/151743338-3fe7bcbd-0543-4af8-8e95-4e049cc85027.mov
+
+
+
